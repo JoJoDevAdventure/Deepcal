@@ -5,9 +5,9 @@ import Home from './pages/Home';
 function App() {
   
   return (
-    <Router basename='/Deepcall'>
+    <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
