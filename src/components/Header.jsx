@@ -4,9 +4,10 @@ import { slideAnimation } from "../config/motion";
 import CustomButton from "./CustomButton";
 import NavBar from "./NavBar";
 
+
 const Header = () => {
   return (
-    <div className="bg-[url('./background-image.png')] bg-background bg-cover bg-center h-[80vh]  px-8 md:px-14 lg:px-20 ">
+    <div className="bg-[url('/background-image.png')] bg-background bg-cover bg-center h-[80vh]  px-8 md:px-14 lg:px-20 ">
       <NavBar />
       <div className="justify-center items-center h-full py-5 md:py-13 lg:py-20 text-center lg:justify-start lg:text-left">
         <motion.div {...slideAnimation("left", 0.4)} className="">
