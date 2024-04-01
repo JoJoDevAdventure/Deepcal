@@ -3,17 +3,17 @@ import React from 'react';
 // Solution component
 const Solution = ({ title, description, image, imgPosition }) => {
   return (
-    <div className={`h-[249px] w-full flex md:flex-row items-center my-8 justify-center ${imgPosition === 'left' ? "pl-4" : "pr-4"} transition duration-300 ease-in-out transform hover:shadow-lg`}>
+    <div className={`h-[249px] w-full flex md:flex-row items-center my-8 justify-between ${imgPosition === 'left' ? "pl-4" : "pr-4"} transition duration-300 ease-in-out transform shadow-drop`}>
 
       {imgPosition === 'right' && (
         <div className="md:mr-8 mb-4 md:mb-0">
-          <img src={image} alt={title} className="w-[337px] h-[249px] rounded-s" />
+          <img src={image} alt={title} className="w-[337px] h-[249px] object-cover rounded-s" />
         </div>
       )}
 
-      <div className="md:text-left text-center w-auto">
+      <div className="md:text-left text-center w-[60%]">
         <h2 className="text-3xl font-medium mb-2">{title}</h2>
-        <p>{description}</p>
+        <p className=''>{description}</p>
       </div>
 
       {imgPosition !== 'right' && (
@@ -38,25 +38,25 @@ const Solutions = () => {
       />
       <Solution
         title="Solution 2"
-        description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
         image="./adas.jpg"
         imgPosition="right"
       />
       <Solution
         title="Solution 3"
-        description="Fusce nec justo sed sem vehicula egestas. Nullam ultricies lobortis nunc nec consequat."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
         image="./robotics.jpg"
         imgPosition="left"
       />
       <Solution
         title="Solution 4"
-        description="Vestibulum eu lorem eu neque hendrerit fermentum ac vitae lorem. Cras fermentum malesuada neque, vel sollicitudin lorem gravida vel."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
         image="./industrial.jpg"
         imgPosition="right"
       />
       <Solution
         title="Solution 5"
-        description="Quisque ultricies enim ut mauris ultrices, id placerat neque ultricies. Curabitur eu pharetra est."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
         image="./truck.jpg"
         imgPosition="left"
       />
