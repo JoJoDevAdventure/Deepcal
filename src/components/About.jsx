@@ -24,7 +24,7 @@ const About = () => {
   const [block4Ref, block4InView] = useInView({ threshold: 0.3 });
 
   return (
-    <div className="">
+    <div className="z-40">
       <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-[150px] lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
         {/* Left Section */}
         <div className="w-[45%]" ref={leftSectionRef}>
