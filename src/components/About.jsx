@@ -21,23 +21,22 @@ const About = () => {
   const [block1Ref, block1InView] = useInView({ threshold: 0.3 });
   const [block2Ref, block2InView] = useInView({ threshold: 0.3 });
   const [block3Ref, block3InView] = useInView({ threshold: 0.3 });
-  const [block4Ref, block4InView] = useInView({ threshold: 0.3});
+  const [block4Ref, block4InView] = useInView({ threshold: 0.3 });
 
   return (
     <div>
-      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-20 text-white lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
+      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-[150px] text-white lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
         {/* Left Section */}
         <div className="w-[45%]" ref={leftSectionRef}>
           {/* Fixed line */}
-          <div
-            className="absolute left-1/2 transform md:translate-x-[35px] lg:translate-x-[40px] border-l-2 border-white h-[70%] lg:h-[75%]"
-          ></div>
+          <div className="absolute left-1/2 transform md:translate-x-[35px] lg:translate-x-[40px] border-l-2 border-white h-[70%] lg:h-[75%]"></div>
 
-          <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[115px] border-l-2 border-white h-[40px]"></div>
+          <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[185px] border-l-2 border-white h-[40px]"></div>
 
-
-          <motion.div {...slideAnimation("up", 0.6)} 
-          className="flex justify-start align-top mt-10 items-top">
+          <motion.div
+            {...slideAnimation("up", 0.6)}
+            className="flex justify-start align-top mt-10 items-top"
+          >
             {/* Icon with thin border */}
             <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
               {/* Place your icon here */}
@@ -63,11 +62,14 @@ const About = () => {
         <div className="align-top mt-10 h-full">
           {/* Individual blocks */}
           <div
-            className="transform absolute left-1/2 w-[45%]"
+            className="transform absolute left-1/2 w-[45%] lg:w-[40%]"
             ref={rightSectionRef}
           >
             {/* Block 1 */}
-            <motion.div {...slideAnimation("up", 0.8)}  className="flex mb-10 justify-start align-top items-top">
+            <motion.div
+              {...slideAnimation("up", 0.8)}
+              className="flex mb-10 justify-start align-top items-top"
+            >
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -75,15 +77,17 @@ const About = () => {
               <div className="ml-4">
                 <h2 className="text-lg font-semibold">SOFTWARE ONLY</h2>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Mauris commodo
-                  malesuada condimentum elementum. Mattis metus donec nunc
-                  turpis tincidunt tristique aliquam aliquet cras.
+                  Minimize resource needs, accelerating processes while reducing
+                  manual labor and time commitments.
                 </p>
               </div>
             </motion.div>
 
             {/* Block 2 */}
-            <motion.div {...slideAnimation("up", 1.2)}  className="flex mb-8 justify-start align-top items-top">
+            <motion.div
+              {...slideAnimation("up", 1.2)}
+              className="flex mb-8 justify-start align-top items-top"
+            >
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -91,15 +95,17 @@ const About = () => {
               <div className="ml-4">
                 <h2 className="text-lg font-semibold">Real-time & ONLINE</h2>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Mauris commodo
-                  malesuada condimentum elementum. Mattis metus donec nunc
-                  turpis tincidunt tristique aliquam aliquet cras.
+                  Enhance performance and safety by enabling immediate and
+                  continuous data access and analysis.
                 </p>
               </div>
             </motion.div>
 
             {/* Block 3 */}
-            <motion.div {...slideAnimation("up", 1.8)} className="flex justify-start align-top items-top">
+            <motion.div
+              {...slideAnimation("up", 1.8)}
+              className="flex justify-start align-top items-top"
+            >
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -107,9 +113,8 @@ const About = () => {
               <div className="ml-4">
                 <h2 className="text-lg font-semibold">Markerless</h2>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Mauris commodo
-                  malesuada condimentum elementum. Mattis metus donec nunc
-                  turpis tincidunt tristique aliquam aliquet cras.
+                  Streamline operations by eliminating the need for additional
+                  hardware, simplifying setup and maintenance.
                 </p>
               </div>
             </motion.div>
@@ -178,9 +183,8 @@ const About = () => {
             <div className="ml-4">
               <h2 className="text-lg font-semibold">SOFTWARE ONLY</h2>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur. Mauris commodo malesuada
-                condimentum elementum. Mattis metus donec nunc turpis tincidunt
-                tristique aliquam aliquet cras.
+                Minimize resource needs, accelerating processes while reducing
+                manual labor and time commitments.
               </p>
             </div>
           </motion.div>
@@ -200,9 +204,8 @@ const About = () => {
             <div className="ml-4">
               <h2 className="text-lg font-semibold">Real-time & ONLINE</h2>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur. Mauris commodo malesuada
-                condimentum elementum. Mattis metus donec nunc turpis tincidunt
-                tristique aliquam aliquet cras.
+                Enhance performance and safety by enabling immediate and
+                continuous data access and analysis.
               </p>
             </div>
           </motion.div>
@@ -222,9 +225,8 @@ const About = () => {
             <div className="ml-4">
               <h2 className="text-lg font-semibold">Markerless</h2>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet consectetur. Mauris commodo malesuada
-                condimentum elementum. Mattis metus donec nunc turpis tincidunt
-                tristique aliquam aliquet cras.
+                Streamline operations by eliminating the need for additional
+                hardware, simplifying setup and maintenance.
               </p>
             </div>
           </motion.div>
