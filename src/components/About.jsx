@@ -8,7 +8,7 @@ const About = () => {
   useEffect(() => {
     const rightSectionHeight = rightSectionRef.current.offsetHeight;
     leftSectionRef.current.style.height = `${rightSectionHeight}px`;
-    lineHeight.current.style.height = `${rightSectionHeight -20}px`;
+    lineHeight.current.style.height = `${rightSectionHeight - 20}px`;
   }, []);
 
   return (
@@ -23,7 +23,7 @@ const About = () => {
           ></div>
           <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[115px] border-l-2 border-white h-[40px]"></div>
 
-          <div className="flex justify-start align-top mt-10">
+          <div className="flex justify-start align-top mt-10 items-top">
             {/* Icon with thin border */}
             <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
               {/* Place your icon here */}
@@ -53,7 +53,7 @@ const About = () => {
             ref={rightSectionRef}
           >
             {/* Block 1 */}
-            <div className="flex items-center mb-10 justify-start align-top">
+            <div className="flex mb-10 justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -69,7 +69,7 @@ const About = () => {
             </div>
 
             {/* Block 2 */}
-            <div className="flex items-center mb-8 justify-start align-top">
+            <div className="flex mb-8 justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -85,7 +85,7 @@ const About = () => {
             </div>
 
             {/* Block 3 */}
-            <div className="flex items-center justify-start align-top ">
+            <div className="flex justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -103,13 +103,15 @@ const About = () => {
         </div>
       </div>
 
+      {/* TODO: Fix line on mobile */}
+
       {/* MOBILE VERS */}
 
       <div className="bg-[#0C0C0C] w-full h-full px-8 md:px-12 lg:px-20 text-white lg:pb-[5%] pb-[15%] block md:hidden gap-8">
         {/* Fixed line */}
-        <div className="absolute left-1 transform translate-x-[60px] border-l-2 border-white h-[80%]"></div>
+        <div className="absolute left-1 transform translate-x-[60px] border-l-2 border-white h-[80%] z-1"></div>
 
-        <div className="flex items-center mb-10 justify-start align-top ">
+        <div className="flex items-top mb-10 justify-start align-top z-2">
           {/* Icon with thin border */}
           <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
             {/* Place your icon here */}
@@ -131,7 +133,7 @@ const About = () => {
         </div>
 
         {/* Block 1 */}
-        <div className="flex items-center mb-10 justify-start align-top">
+        <div className="flex items-top mb-10 justify-start align-top z-10">
           <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
             {/* Place your icon here */}
             iconNNNN
@@ -147,7 +149,7 @@ const About = () => {
         </div>
 
         {/* Block 2 */}
-        <div className="flex items-center mb-8 justify-start align-top">
+        <div className="flex items-top mb-8 justify-start align-top z-2">
           <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
             {/* Place your icon here */}
             iconNNNN
@@ -163,7 +165,7 @@ const About = () => {
         </div>
 
         {/* Block 3 */}
-        <div className="flex items-center justify-start align-top ">
+        <div className="flex items-top justify-start align-top z-2">
           <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
             {/* Place your icon here */}
             iconNNNN

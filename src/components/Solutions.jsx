@@ -21,6 +21,7 @@ const Solution = ({ title, description, image, imgPosition }) => {
           <img src={image} alt={title} className="w-[337px] h-[249px] object-cover rounded-s" />
         </div>
       )}
+
     </div>
   );
 };
@@ -28,7 +29,9 @@ const Solution = ({ title, description, image, imgPosition }) => {
 // Solutions component
 const Solutions = () => {
   return (
-    <div className="max-w-4xl mx-auto text-center mt-[5%]">
+    
+    <div className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]">
+      {/* TODO: Solutions responsiveness on mobile */}
       <h2 className="text-4xl font-semibold border-b-2 border-gray-400 inline-block mb-8 pb-2">Our Solutions</h2>
       <Solution
         title="Solution 1"

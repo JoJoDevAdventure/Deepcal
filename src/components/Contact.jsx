@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="bg-[url('/contact.jpg')] bg-cover bg-center w-screen h-[580px] mt-10% text-center flex flex-col items-center">
+      {/* TODO: Mobile responsiveness */}
       <h1 className="text-4xl font-medium border-b-2 text-white border-gray-400 inline-block mb-8 pb-2 mt-20">
         GET IN TOUCH
       </h1>
