@@ -6,12 +6,10 @@ import { slideAnimation } from "../config/motion";
 const About = () => {
   const leftSectionRef = useRef(null);
   const rightSectionRef = useRef(null);
-  const lineHeight = useRef(null);
 
   useEffect(() => {
     const rightSectionHeight = rightSectionRef.current.offsetHeight;
     leftSectionRef.current.style.height = `${rightSectionHeight}px`;
-    lineHeight.current.style.height = `${rightSectionHeight - 20}px`;
   }, []);
 
   const ref = useRef(null);
@@ -27,17 +25,19 @@ const About = () => {
 
   return (
     <div>
-      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-20 text-white lg:pb-[5%] pb-[15%] hidden md:flex">
+      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-20 text-white lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
         {/* Left Section */}
         <div className="w-[45%]" ref={leftSectionRef}>
           {/* Fixed line */}
           <div
-            className="absolute left-1/2 transform translate-x-[35px] lg:translate-x-[40px] border-l-2 border-white"
-            ref={lineHeight}
+            className="absolute left-1/2 transform md:translate-x-[35px] lg:translate-x-[40px] border-l-2 border-white h-[70%] lg:h-[75%]"
           ></div>
+
           <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[115px] border-l-2 border-white h-[40px]"></div>
 
-          <div className="flex justify-start align-top mt-10 items-top">
+
+          <motion.div {...slideAnimation("up", 0.6)} 
+          className="flex justify-start align-top mt-10 items-top">
             {/* Icon with thin border */}
             <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
               {/* Place your icon here */}
@@ -56,7 +56,7 @@ const About = () => {
                 and maintenance.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Section */}
@@ -67,7 +67,7 @@ const About = () => {
             ref={rightSectionRef}
           >
             {/* Block 1 */}
-            <div className="flex mb-10 justify-start align-top items-top">
+            <motion.div {...slideAnimation("up", 0.8)}  className="flex mb-10 justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -80,10 +80,10 @@ const About = () => {
                   turpis tincidunt tristique aliquam aliquet cras.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Block 2 */}
-            <div className="flex mb-8 justify-start align-top items-top">
+            <motion.div {...slideAnimation("up", 1.2)}  className="flex mb-8 justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -96,10 +96,10 @@ const About = () => {
                   turpis tincidunt tristique aliquam aliquet cras.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Block 3 */}
-            <div className="flex justify-start align-top items-top">
+            <motion.div {...slideAnimation("up", 1.8)} className="flex justify-start align-top items-top">
               <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
                 {/* Place your icon here */}
                 iconNNNN
@@ -112,7 +112,7 @@ const About = () => {
                   turpis tincidunt tristique aliquam aliquet cras.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
