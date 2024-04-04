@@ -134,64 +134,66 @@ const Solutions = () => {
       <h2 className="text-4xl font-semibold border-b-2 border-gray-400 inline-block mb-8 pb-2">
         Our Solutions
       </h2>
+      {/* Desktop view */}
       <div className="hidden md:block">
         <Solution
-          title="Solution 1"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
+          title="Autonomous Mobility"
+          description="Empower vehicles to navigate and operate independently, enhancing safety and efficiency in transportation systems with intelligent sensor-based technology."
           image="./autonomus.jpg"
           imgPosition="left"
         />
         <Solution
-          title="Solution 2"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
+          title="ADAS (Advanced Driver Assistance Systems)"
+          description="Revolutionize driving experiences by providing real-time alerts, assistance, and automated features, ensuring safer and more convenient journeys for all."
           image="./adas.jpg"
           imgPosition="right"
         />
         <Solution
-          title="Solution 3"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
+          title="Robotics"
+          description="Elevate automation capabilities with sensor-driven precision and adaptability, empowering robots to perform complex tasks efficiently in diverse environments."
           image="./robotics.jpg"
           imgPosition="left"
         />
         <Solution
-          title="Solution 4"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
+          title="Industrial Automation"
+          description="Optimize manufacturing processes with sensor technology, enabling seamless integration, precise control, and enhanced productivity across industrial operations."
           image="./industrial.jpg"
           imgPosition="right"
         />
         <Solution
-          title="Solution 5"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
+          title="Trucking"
+          description="Transform transportation logistics with sensor-driven insights, improving fleet management, safety, and efficiency in the trucking industry for smoother operations."
           image="./truck.jpg"
           imgPosition="left"
         />
       </div>
+      {/* Mobile view */}
       <div className="md:hidden">
-      <SolutionMobile
-        title="Solution 1"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
-        image="./autonomus.jpg"
-      />
-      <SolutionMobile
-        title="Solution 2"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
-        image="./adas.jpg"
-      />
-      <SolutionMobile
-        title="Solution 3"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
-        image="./robotics.jpg"
-      />
-      <SolutionMobile
-        title="Solution 4"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
-        image="./industrial.jpg"
-      />
-      <SolutionMobile
-        title="Solution 5"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur elit vel magna sollicitudin aliquet."
-        image="./truck.jpg"
-      />
+        <SolutionMobile
+          title="Autonomous Mobility"
+          description="Empower vehicles to navigate and operate independently, enhancing safety and efficiency in transportation systems with intelligent sensor-based technology."
+          image="./autonomus.jpg"
+        />
+        <SolutionMobile
+          title="ADAS (Advanced Driver Assistance Systems)"
+          description="Revolutionize driving experiences by providing real-time alerts, assistance, and automated features, ensuring safer and more convenient journeys for all."
+          image="./adas.jpg"
+        />
+        <SolutionMobile
+          title="Robotics"
+          description="Elevate automation capabilities with sensor-driven precision and adaptability, empowering robots to perform complex tasks efficiently in diverse environments."
+          image="./robotics.jpg"
+        />
+        <SolutionMobile
+          title="Industrial Automation"
+          description="Optimize manufacturing processes with sensor technology, enabling seamless integration, precise control, and enhanced productivity across industrial operations."
+          image="./industrial.jpg"
+        />
+        <SolutionMobile
+          title="Trucking"
+          description="Transform transportation logistics with sensor-driven insights, improving fleet management, safety, and efficiency in the trucking industry for smoother operations."
+          image="./truck.jpg"
+        />
       </div>
     </div>
   );

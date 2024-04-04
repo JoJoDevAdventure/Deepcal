@@ -24,27 +24,26 @@ const About = () => {
   const [block4Ref, block4InView] = useInView({ threshold: 0.3 });
 
   return (
-    <div>
-      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-[150px] text-white lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
+    <div className="">
+      <div className="bg-[#0C0C0C] h-full px-8 md:px-12 lg:px-[150px] lg:pb-[6.5%] pb-[12.8%] hidden md:flex relative">
         {/* Left Section */}
         <div className="w-[45%]" ref={leftSectionRef}>
           {/* Fixed line */}
-          <div className="absolute left-1/2 transform md:translate-x-[35px] lg:translate-x-[40px] border-l-2 border-white h-[70%] lg:h-[75%]"></div>
+          <div className="absolute left-1/2 transform md:translate-x-[35px] lg:translate-x-[40px] border-l-2 border-[#D9D9D9] h-[70%] lg:h-[75%]"></div>
 
-          <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[185px] border-l-2 border-white h-[40px]"></div>
+          <div className="absolute left-1 transform translate-x-[80px] lg:translate-x-[185px] border-l-2 border-[#D9D9D9] h-[40px]"></div>
 
           <motion.div
             {...slideAnimation("up", 0.6)}
             className="flex justify-start align-top mt-10 items-top"
           >
             {/* Icon with thin border */}
-            <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
-              {/* Place your icon here */}
-              iconNN
+            <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+              <img src="./who.svg" alt="" />
             </div>
 
             {/* Title and description */}
-            <div className="ml-4 w-[70%]">
+            <div className="ml-4 w-[70%] text-[#D9D9D9]">
               <h2 className="text-lg font-semibold">WHO ARE WE?</h2>
               <p className="text-sm">
                 The current process for calibrating cameras used in cars,
@@ -59,7 +58,7 @@ const About = () => {
         </div>
 
         {/* Right Section */}
-        <div className="align-top mt-10 h-full">
+        <div className="align-top mt-10 h-full text-[#D9D9D9]">
           {/* Individual blocks */}
           <div
             className="transform absolute left-1/2 w-[45%] lg:w-[40%]"
@@ -70,11 +69,10 @@ const About = () => {
               {...slideAnimation("up", 0.8)}
               className="flex mb-10 justify-start align-top items-top"
             >
-              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-                {/* Place your icon here */}
-                iconNNNN
+              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+                <img className="mx-10" src="./soft.svg" alt="" />
               </div>
-              <div className="ml-4">
+              <div className="ml-4 transform transition-all duration-300 ease-out hover:translate-x-3">
                 <h2 className="text-lg font-semibold">SOFTWARE ONLY</h2>
                 <p className="text-sm">
                   Minimize resource needs, accelerating processes while reducing
@@ -88,11 +86,10 @@ const About = () => {
               {...slideAnimation("up", 1.2)}
               className="flex mb-8 justify-start align-top items-top"
             >
-              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-                {/* Place your icon here */}
-                iconNNNN
+              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center text-transparent">
+                <img className="mx-10" src="./wifi.svg" alt="" />
               </div>
-              <div className="ml-4">
+              <div className="ml-4 transform transition-all duration-300 ease-out hover:translate-x-3">
                 <h2 className="text-lg font-semibold">Real-time & ONLINE</h2>
                 <p className="text-sm">
                   Enhance performance and safety by enabling immediate and
@@ -106,11 +103,10 @@ const About = () => {
               {...slideAnimation("up", 1.8)}
               className="flex justify-start align-top items-top"
             >
-              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-                {/* Place your icon here */}
-                iconNNNN
+              <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+                <img className="mx-10" src="./scan.svg" alt="" />
               </div>
-              <div className="ml-4">
+              <div className="ml-4 transform transition-all duration-300 ease-out hover:translate-x-3">
                 <h2 className="text-lg font-semibold">Markerless</h2>
                 <p className="text-sm">
                   Streamline operations by eliminating the need for additional
@@ -128,11 +124,11 @@ const About = () => {
 
       <div
         ref={ref}
-        className="bg-[#0C0C0C] w-full h-full px-8 text-white pb-[15%] block md:hidden relative "
+        className="bg-[#0C0C0C] w-full h-full px-8 pb-[15%] block md:hidden relative text-[#D9D9D9]"
       >
         {/* Fixed line */}
         <motion.div
-          className="absolute left-[65px] transform translate-x-[65px] border-r-2 border-white h-[80%]"
+          className="absolute left-[65px] transform translate-x-[65px] border-r-2 border-[#D9D9D9] h-[80%]"
           style={{
             scaleY: scrollYProgress,
             transformOrigin: "top left",
@@ -149,9 +145,8 @@ const About = () => {
             animate={block1InView ? slideAnimation("up", 0.6) : {}}
           >
             {/* Icon with thin border */}
-            <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-white rounded-full flex items-center justify-center">
-              {/* Place your icon here */}
-              iconNN
+            <div className="bg-[#0C0C0C] lg:w-[80px] lg:h-[80px] w-[70px] h-[70px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+            <img src="./who.svg" alt="" />
             </div>
 
             {/* Title and description */}
@@ -176,9 +171,8 @@ const About = () => {
             }`}
             animate={block2InView ? slideAnimation("up", 0.6) : {}}
           >
-            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-              {/* Place your icon here */}
-              iconNNNN
+            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+            <img className="mx-10" src="./soft.svg" alt="" />
             </div>
             <div className="ml-4">
               <h2 className="text-lg font-semibold">SOFTWARE ONLY</h2>
@@ -197,9 +191,8 @@ const About = () => {
             }`}
             animate={block3InView ? slideAnimation("up", 0.6) : {}}
           >
-            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-              {/* Place your icon here */}
-              iconNNNN
+            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+            <img className="mx-10" src="./wifi.svg" alt="" />
             </div>
             <div className="ml-4">
               <h2 className="text-lg font-semibold">Real-time & ONLINE</h2>
@@ -218,9 +211,8 @@ const About = () => {
             }`}
             animate={block4InView ? slideAnimation("up", 0.6) : {}}
           >
-            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-white rounded-full flex items-center justify-center">
-              {/* Place your icon here */}
-              iconNNNN
+            <div className="bg-[#0C0C0C] w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border-2 border-[#D9D9D9] rounded-full flex items-center justify-center">
+            <img className="mx-10" src="./scan.svg" alt="" />
             </div>
             <div className="ml-4">
               <h2 className="text-lg font-semibold">Markerless</h2>

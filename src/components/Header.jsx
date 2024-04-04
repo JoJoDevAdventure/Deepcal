@@ -26,20 +26,20 @@ const Header = () => {
           </p>
         </motion.div>
         <motion.div
-          className="md:flex md:space-x-10 md:items-center md:justify-center md:text-center px-[20%] mt-5 lg:justify-start lg:text-left lg:items-start lg:px-0 lg:w-[40%]"
+          className="md:flex md:space-x-10 md:items-center md:justify-center md:text-center px-[20%] mt-5 lg:justify-start lg:text-left lg:items-start lg:px-0 lg:w-[49%]"
           {...slideAnimation("up", 1)}
         >
           <CustomButton
             type="filled"
             title="OUR SOLUTIONS"
             handleClick={() => false}
-            customStyles="w-full px-6 py-3 font-bold text-sm mb-5 md:my-0"
+            customStyles="w-full px-6 py-4 font-bold text-sm mb-5 md:my-0"
           />
           <CustomButton
             type="outline"
             title="CONTACT US"
             handleClick={() => false}
-            customStyles="w-full px-6 py-3 font-bold text-sm"
+            customStyles="w-full px-6 py-4 font-bold text-sm"
           />
         </motion.div>
       </div>
