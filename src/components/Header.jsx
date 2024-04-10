@@ -33,13 +33,13 @@ const Header = () => {
             type="filled"
             title="OUR SOLUTIONS"
             handleClick={() => false}
-            customStyles="w-full px-6 py-4 font-bold text-sm mb-5 md:my-0"
+            customStyles={"w-full px-6 py-4 font-bold text-sm mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
           />
           <CustomButton
             type="outline"
             title="CONTACT US"
             handleClick={() => false}
-            customStyles="w-full px-6 py-4 font-bold text-sm"
+            customStyles={"w-full text-white px-6 py-4 font-bold text-sm hover:bg-white hover:text-black"}
           />
         </motion.div>
       </div>

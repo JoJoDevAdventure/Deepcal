@@ -5,14 +5,13 @@ const CustomButton = ({ type, title, customStyles, handleClick }) => {
     const generateStyle = (type) => {
         if (type === 'filled') {
             return {
-                backgroundColor: "#fff",
-                color: '#000',
+
             }
         } else {
             return {
                 borderWidth: '1px',
                 borderColor:  "#fff",
-                color:  "#fff",
+
             }
         }
     }
