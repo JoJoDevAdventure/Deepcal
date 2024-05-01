@@ -20,7 +20,7 @@ const NavBar = () => {
 
         {/* Logo on the left */}
         <div className="flex items-center">
-          <img className="w-24" src="./Logo.png" alt="Logo" />
+          <img className="w-24" src="./Logo-W.png" alt="Logo" />
         </div>
       </div>
 

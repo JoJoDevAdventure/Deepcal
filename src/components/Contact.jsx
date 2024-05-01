@@ -11,8 +11,8 @@ const Contact = () => {
         <h2 className="text-2xl font-medium"> Want To Know More ? </h2>
         <p className="font-light"> Get in touch with us today for further details. We're here to answer any questions you may have! </p>
         <div className="flex gap-10 text-left">
-          <p className="font-light"> bluvalueconsulting@gmail.com <br/> info@deepcal.xyz</p>
-          <NavLink to="/contact" className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">
+          <p className="font-light"> info@deepcal.xyz</p>
+          <NavLink to="/Deepcall/contact" className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">
           Contact Us
         </NavLink>
         </div>

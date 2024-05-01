@@ -9,7 +9,7 @@ const ContactPage = () => {
         <h1 className="text-white text-4xl">Leave us a message!</h1>
         <p className="text-white mb-8">We'll reach back to you.</p>
 
-        <form className="shadow-md rounded px-8 pt-4 pb-8 mb-4 w-[450px]">
+        <form className="rounded px-8 pt-4 pb-8 mb-4 w-[450px]">
           <div className="mb-4 text-white">
             <label className="block text-sm font-bold mb-2" htmlFor="name">
               Name
@@ -17,6 +17,7 @@ const ContactPage = () => {
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent text-white"
               id="name"
+              name="name"
               type="text"
               placeholder="Your Name"
             />
@@ -28,6 +29,7 @@ const ContactPage = () => {
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent text-white"
               id="email"
+              name="email"
               type="email"
               placeholder="Your Email"
             />
@@ -39,6 +41,7 @@ const ContactPage = () => {
             <textarea
               className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-transparent text-white"
               id="message"
+              name="message"
               placeholder="Your Message"
             />
           </div>

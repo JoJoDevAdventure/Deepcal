@@ -24,7 +24,7 @@ const Footer = ({ bg }) => {
         {bg === "black" ? (
           <img
             className="w-[60px] md:w-[120px] object-cover"
-            src="./Logo.png"
+            src="./Logo-W.png"
             alt=""
           />
         ) : (
