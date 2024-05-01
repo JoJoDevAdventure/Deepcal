@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -9,11 +10,11 @@ const Contact = () => {
       <div className="h-[250px] w-[400px] md:w-[500px] bg-[#D9D9D9] mt-10 justify-between items-center py-6 lg:py-10 px-4 lg:px-10 flex flex-col">
         <h2 className="text-2xl font-medium"> Want To Know More ? </h2>
         <p className="font-light"> Get in touch with us today for further details. We're here to answer any questions you may have! </p>
-        <div className="flex gap-10">
-          <p className="font-light"> grant@deepcal.xyz <br/> info@deepcal.xyz</p>
-          <button className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">
+        <div className="flex gap-10 text-left">
+          <p className="font-light"> bluvalueconsulting@gmail.com <br/> info@deepcal.xyz</p>
+          <NavLink to="/contact" className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">
           Contact Us
-        </button>
+        </NavLink>
         </div>
       </div>
     </div>

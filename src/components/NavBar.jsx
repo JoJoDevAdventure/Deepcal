@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,20 +28,20 @@ const NavBar = () => {
       <ul
         className={`hidden md:flex mt-4 md:mt-0 md:flex-grow md:justify-center md:text-l md:font-regular`}
       >
-        <li className="mr-4 lg:mr-8">
-          <a href="#">
+        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+          <NavLink to="/Deepcall/">
             Home
-          </a>
+          </NavLink>
         </li>
-        <li className="mr-4 lg:mr-8">
-          <a href="#">
+        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+          <NavLink to="/Deepcall/">
             Company
-          </a>
+          </NavLink>
         </li>
-        <li className="mr-4 lg:mr-8">
-          <a href="#">
+        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+          <NavLink to="/Deepcall/">
             Solutions
-          </a>
+          </NavLink>
         </li>
       </ul>
 
@@ -58,19 +59,19 @@ const NavBar = () => {
                 </button>
               </li>
               <li className="mb-4">
-                <a onClick={toggleMenu} href="#">
+                <NavLink to="/Deepcall/" onClick={toggleMenu}>
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="mb-4">
-                <a onClick={toggleMenu} href="#">
+                <NavLink to="/Deepcall/" onClick={toggleMenu}>
                   Company
-                </a>
+                </NavLink>
               </li>
               <li className="mb-4">
-                <a onClick={toggleMenu} href="#">
+                <NavLink onClick={toggleMenu} to="/Deepcall/">
                   Solutions
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -79,9 +80,9 @@ const NavBar = () => {
 
       {/* Contact us button on the right */}
       <div className="block">
-        <button className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2">
+        <NavLink to="/Deepcall/contact" className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2">
           Contact Us
-        </button>
+        </NavLink>
       </div>
     </nav>
   );

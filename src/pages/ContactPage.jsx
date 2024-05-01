@@ -1,11 +1,11 @@
 import React from "react";
-import { NavBar } from "../components";
+import { Footer, NavBar } from "../components";
 
 const ContactPage = () => {
   return (
-    <div className="bg-[#0C0C0C]">
+    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%]">
       <NavBar />
-      <div className="flex flex-col justify-center items-center h-screen w-full">
+      <div className="flex flex-col justify-top items-center h-auto w-full mt-[10%] mb-[5%]">
         <h1 className="text-white text-4xl">Leave us a message!</h1>
         <p className="text-white mb-8">We'll reach back to you.</p>
 
@@ -52,6 +52,7 @@ const ContactPage = () => {
           </div>
         </form>
       </div>
+      <Footer bg={"black"}/>
     </div>
   );
 };
