@@ -7,6 +7,13 @@ import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
+
+  const scrollByAmount = (amount) => {
+    window.scrollTo({
+      top: window.scrollY + amount,
+      behavior: 'smooth',
+    });
+  };
   
   return (
     <div className="bg-[url('/background-image.jpeg')] bg-background bg-cover bg-center h-[80vh]  px-2 md:px-14 lg:px-[12%] relative">
@@ -34,7 +41,7 @@ const Header = () => {
           <CustomButton
             type="filled"
             title="OUR SOLUTIONS"
-            handleClick={() => false}
+            handleClick={() => scrollByAmount(1000)}
             customStyles={"w-full px-6 py-4 font-bold text-sm mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
           />
           <NavLink to="/Deepcall/contact" className="w-[45%]">
