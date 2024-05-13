@@ -4,6 +4,13 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollByAmount = (amount) => {
+    window.scrollTo({
+      top: window.scrollY + amount,
+      behavior: 'smooth',
+    });
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -33,12 +40,12 @@ const NavBar = () => {
             Home
           </NavLink>
         </li>
-        <li className="mr-4 lg:mr-8 hover:text-gray-400">
-          <NavLink to="/Deepcall/">
+        <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(500)}>
+          <NavLink to="/Deepcall/" >
             Company
           </NavLink>
         </li>
-        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+        <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(1000)}>
           <NavLink to="/Deepcall/">
             Solutions
           </NavLink>
@@ -63,13 +70,13 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="mb-4">
-                <NavLink to="/Deepcall/" onClick={toggleMenu}>
+              <li className="mb-4" onClick={() => scrollByAmount(500)}>
+                <NavLink to="/Deepcall/" onClick={() => {toggleMenu()}}>
                   Company
                 </NavLink>
               </li>
-              <li className="mb-4">
-                <NavLink onClick={toggleMenu} to="/Deepcall/">
+              <li className="mb-4" onClick={() => scrollByAmount(1400)}>
+                <NavLink to="/Deepcall/" onClick={() => {toggleMenu(); scrollByAmount(-1000);}}>
                   Solutions
                 </NavLink>
               </li>

@@ -13,7 +13,7 @@
 }
 
 .app {
-  @apply w-full h-full overflow-hidden bg-[#D9D9D9];
+  @apply w-full h-full overflow-hidden bg-[#D9D9D9] relative;
 } 
 
 .home {

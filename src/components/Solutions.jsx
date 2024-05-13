@@ -23,7 +23,7 @@ const Solution = ({ title, description, image, imgPosition }) => {
   }, [controls, inView]);
 
   return (
-    <div
+    <section 
       className={`md:h-[249px] w-[90%] lg:w-full flex md:flex-row items-center my-8 justify-between flex-col mx-auto align-middle ${
         imgPosition === "right" ? "" : "pl-4"
       } transition duration-800 ease-out transform shadow-drop`}
@@ -77,7 +77,7 @@ const Solution = ({ title, description, image, imgPosition }) => {
           />
         </motion.div>
       )}
-    </div>
+    </section>
   );
 };
 
@@ -131,7 +131,7 @@ const SolutionMobile = ({ title, description, image }) => {
 // Solutions component
 const Solutions = () => {
   return (
-    <div className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]">
+    <section id="solutions" className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]">
       <h2 className="text-2xl md:text-4xl font-semibold border-b-2 border-gray-400 inline-block mb-8 pb-2">
         Our Solutions
       </h2>
@@ -196,7 +196,7 @@ const Solutions = () => {
           image="./truck.jpg"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

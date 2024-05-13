@@ -9,8 +9,8 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   
   return (
-    <div className="bg-[url('/background-image.jpeg')] bg-background bg-cover bg-center h-[80vh]  px-2 md:px-14 lg:px-[12%] ">
-      <NavBar />
+    <div className="bg-[url('/background-image.jpeg')] bg-background bg-cover bg-center h-[80vh]  px-2 md:px-14 lg:px-[12%] relative">
+      <NavBar/>
       <div className="justify-center items-center h-full py-5 md:py-13 lg:py-20 text-center lg:justify-start lg:text-left">
         <motion.div {...slideAnimation("left", 0.4)} className="">
           <h1 className="head-text text-white">
@@ -41,7 +41,7 @@ const Header = () => {
           <CustomButton
             type="outline"
             title="CONTACT US"
-            handleClick={() => false}
+            handleClick={ () => {}}
             customStyles={"w-full text-white px-6 py-4 font-bold text-sm hover:bg-white hover:text-black"}
           />
           </NavLink>
