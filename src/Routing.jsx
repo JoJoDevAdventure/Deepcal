@@ -6,8 +6,8 @@ export const Routing = () => {
     return (
         <Router>
             <Routes>
-                <Route path='/Deepcall/' element={<Home />} />
-                <Route path='/Deepcall/contact' element={<ContactPage />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/contact' element={<ContactPage />} />
             </Routes>
         </Router>
     )
