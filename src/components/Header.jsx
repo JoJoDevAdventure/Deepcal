@@ -44,7 +44,7 @@ const Header = () => {
             handleClick={() => scrollByAmount(1000)}
             customStyles={"w-full px-6 py-4 font-bold text-sm mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
           />
-          <NavLink to="/Deepcall/contact" className="w-[45%]">
+          <NavLink to="/contact" className="w-[45%]">
           <CustomButton
             type="outline"
             title="CONTACT US"

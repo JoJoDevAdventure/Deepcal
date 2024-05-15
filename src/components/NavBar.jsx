@@ -36,17 +36,17 @@ const NavBar = () => {
         className={`hidden md:flex mt-4 md:mt-0 md:flex-grow md:justify-center md:text-l md:font-regular`}
       >
         <li className="mr-4 lg:mr-8 hover:text-gray-400">
-          <NavLink to="/Deepcall/">
+          <NavLink to="/">
             Home
           </NavLink>
         </li>
         <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(500)}>
-          <NavLink to="/Deepcall/" >
+          <NavLink to="/" >
             Company
           </NavLink>
         </li>
         <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(1000)}>
-          <NavLink to="/Deepcall/">
+          <NavLink to="/">
             Solutions
           </NavLink>
         </li>
@@ -66,17 +66,17 @@ const NavBar = () => {
                 </button>
               </li>
               <li className="mb-4">
-                <NavLink to="/Deepcall/" onClick={toggleMenu}>
+                <NavLink to="/" onClick={toggleMenu}>
                   Home
                 </NavLink>
               </li>
               <li className="mb-4" onClick={() => scrollByAmount(500)}>
-                <NavLink to="/Deepcall/" onClick={() => {toggleMenu()}}>
+                <NavLink to="/" onClick={() => {toggleMenu()}}>
                   Company
                 </NavLink>
               </li>
               <li className="mb-4" onClick={() => scrollByAmount(1400)}>
-                <NavLink to="/Deepcall/" onClick={() => {toggleMenu(); scrollByAmount(-1000);}}>
+                <NavLink to="/" onClick={() => {toggleMenu(); scrollByAmount(-1000);}}>
                   Solutions
                 </NavLink>
               </li>
@@ -87,7 +87,7 @@ const NavBar = () => {
 
       {/* Contact us button on the right */}
       <div className="block">
-        <NavLink to="/Deepcall/contact" className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2">
+        <NavLink to="/contact" className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2">
           Contact Us
         </NavLink>
       </div>
