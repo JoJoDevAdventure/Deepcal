@@ -21,13 +21,13 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%]">
+    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] h-[100%]">
       <NavBar />
       <div className="flex flex-col justify-top items-center h-auto w-full mt-[10%] mb-[5%]">
         <h1 className="text-white text-4xl">Leave us a message!</h1>
         <p className="text-white mb-8">We'll reach back to you.</p>
 
-        <form className="rounded px-8 pt-4 pb-8 mb-4 w-[450px]" onSubmit={handleSubmit}>
+        <form className="rounded px-8 pt-4 md:pb-4 mb-4 w-[450px] pb-10" onSubmit={handleSubmit}>
           <div className="mb-4 text-white">
             <label className="block text-sm font-bold mb-2" htmlFor="name">
               Name
