@@ -23,7 +23,7 @@ const Solution = ({ title, description, image, imgPosition }) => {
   }, [controls, inView]);
 
   return (
-    <section 
+    <section
       className={`md:h-[249px] w-[90%] lg:w-full flex md:flex-row items-center my-8 justify-between flex-col mx-auto align-middle ${
         imgPosition === "right" ? "" : "pl-4"
       } transition duration-800 ease-out transform shadow-drop`}
@@ -131,7 +131,10 @@ const SolutionMobile = ({ title, description, image }) => {
 // Solutions component
 const Solutions = () => {
   return (
-    <section id="solutions" className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]">
+    <section
+      id="solutions"
+      className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]"
+    >
       <h2 className="text-2xl md:text-4xl font-semibold border-b-2 border-gray-400 inline-block mb-8 pb-2">
         Our Solutions
       </h2>
@@ -139,31 +142,31 @@ const Solutions = () => {
       <div className="hidden md:block">
         <Solution
           title="Autonomous Mobility"
-          description="Empower vehicles to navigate and operate independently, enhancing safety and efficiency in transportation systems with intelligent sensor-based technology."
+          description="Autonomous driving relies on multiple sensors functioning in harmony. Vehicles must monitor their surroundings, recognize approaching obstacles, and plan their routes. Uncalibrated or misaligned sensors can pose serious risks, potentially leading to injuries or fatalities."
           image="./autonomus.jpg"
           imgPosition="left"
         />
         <Solution
           title="ADAS (Advanced Driver Assistance Systems)"
-          description="Revolutionize driving experiences by providing real-time alerts, assistance, and automated features, ensuring safer and more convenient journeys for all."
+          description="More and more cars on the road nowadays are equipped with Advanced Driver Assistance Systems (ADAS). While ADAS can improve road safety, it's essential that the sensors are properly calibrated. DeepCal's sophisticated Zero-Click Software automatically calibrates the sensors, ensuring the vehicle functions as it should."
           image="./adas.jpg"
           imgPosition="right"
         />
         <Solution
           title="Robotics"
-          description="Elevate automation capabilities with sensor-driven precision and adaptability, empowering robots to perform complex tasks efficiently in diverse environments."
+          description="Our specialized calibration software represents one of the first software-based approaches in the robotics industry. Uneven and complex terrain can pose challenges for sensors operating in unison. Our Zero-Click solution offers solutions for both indoor and outdoor environments."
           image="./robotics.jpg"
           imgPosition="left"
         />
         <Solution
           title="Industrial Automation"
-          description="Optimize manufacturing processes with sensor technology, enabling seamless integration, precise control, and enhanced productivity across industrial operations."
+          description="Calibrating sensors is a critical process in Industrial Automation that should not be overlooked. Let our cost-efficient and fast Zero-Click solution take care of your sensor calibration needs."
           image="./industrial.jpg"
           imgPosition="right"
         />
         <Solution
           title="Trucking"
-          description="Transform transportation logistics with sensor-driven insights, improving fleet management, safety, and efficiency in the trucking industry for smoother operations."
+          description="DeepCal's automotive software is designed to address your sensor calibration needs for trucking. We offer a cost-efficient solution that doesn't require any additional hardware."
           image="./truck.jpg"
           imgPosition="left"
         />
@@ -172,27 +175,27 @@ const Solutions = () => {
       <div className="md:hidden">
         <SolutionMobile
           title="Autonomous Mobility"
-          description="Empower vehicles to navigate and operate independently, enhancing safety and efficiency in transportation systems with intelligent sensor-based technology."
+          description="Autonomous driving relies on multiple sensors functioning in harmony. Vehicles must monitor their surroundings, recognize approaching obstacles, and plan their routes. Uncalibrated or misaligned sensors can pose serious risks, potentially leading to injuries or fatalities."
           image="./autonomus.jpg"
         />
         <SolutionMobile
-          title="ADAS (Advanced Driver Assistance Systems)"
-          description="Revolutionize driving experiences by providing real-time alerts, assistance, and automated features, ensuring safer and more convenient journeys for all."
+          title="ADAS"
+          description="More and more cars on the road nowadays are equipped with Advanced Driver Assistance Systems (ADAS). While ADAS can improve road safety, it's essential that the sensors are properly calibrated. DeepCal's sophisticated Zero-Click Software automatically calibrates the sensors, ensuring the vehicle functions as it should."
           image="./adas.jpg"
         />
         <SolutionMobile
           title="Robotics"
-          description="Elevate automation capabilities with sensor-driven precision and adaptability, empowering robots to perform complex tasks efficiently in diverse environments."
+          description="Our specialized calibration software represents one of the first software-based approaches in the robotics industry. Uneven and complex terrain can pose challenges for sensors operating in unison. Our Zero-Click solution offers solutions for both indoor and outdoor environments."
           image="./robotics.jpg"
         />
         <SolutionMobile
           title="Industrial Automation"
-          description="Optimize manufacturing processes with sensor technology, enabling seamless integration, precise control, and enhanced productivity across industrial operations."
+          description="Calibrating sensors is a critical process in Industrial Automation that should not be overlooked. Let our cost-efficient and fast Zero-Click solution take care of your sensor calibration needs."
           image="./industrial.jpg"
         />
         <SolutionMobile
           title="Trucking"
-          description="Transform transportation logistics with sensor-driven insights, improving fleet management, safety, and efficiency in the trucking industry for smoother operations."
+          description="DeepCal's automotive software is designed to address your sensor calibration needs for trucking. We offer a cost-efficient solution that doesn't require any additional hardware."
           image="./truck.jpg"
         />
       </div>
