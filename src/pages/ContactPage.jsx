@@ -2,23 +2,56 @@ import React, { useState } from "react";
 import { Footer, NavBar } from "../components";
 
 const ContactPage = () => {
-  const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setMessage] = React.useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyUZVI4q5QOq522FZObtwrd6atYJyr6p7IrPOnY--14HO50gqlI7mqAYz6LKo5sd4l2yQ/exec';
+    setMessage("Sending...");
+
     const form = e.target;
     const formData = new FormData(form);
-    fetch(scriptURL, { method: 'POST', body: formData })
-      .then(response => {
-        setSuccessMessage("Message sent successfully");
-        setTimeout(() => {
-          setSuccessMessage("");
-        }, 5000);
-        form.reset();
-      })
-      .catch(error => console.error('Error!', error.message));
+
+    // Append access key for email submission
+    formData.append("access_key", "cd8391e9-ca2a-49f8-8724-f8c41ba0c1f0");
+
+    try {
+      // Submit to Web3Forms for email
+      const emailResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const emailData = await emailResponse.json();
+
+      // Check response from Web3Forms
+      if (emailData.success) {
+        // Submit to Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyUZVI4q5QOq522FZObtwrd6atYJyr6p7IrPOnY--14HO50gqlI7mqAYz6LKo5sd4l2yQ/exec';
+        const googleFormData = new FormData(form); // Use a new FormData object for Google Sheets
+
+        const googleResponse = await fetch(scriptURL, {
+          method: 'POST',
+          body: googleFormData
+        });
+
+        if (googleResponse.ok) {
+          setMessage("Message sent successfully!");
+          setTimeout(() => {
+            setMessage("");
+          }, 5000);
+          form.reset();
+        } else {
+          setMessage("Message not sent, try again later.");
+          throw new Error("Failed to submit to Google Sheets");
+        }
+      } else {
+        throw new Error(emailData.message);
+      }
+    } catch (error) {
+      console.error('Error!', error.message);
+      setMessage(`Error: ${error.message}`);
+    }
   };
+  
 
   return (
     <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] h-[100%]">
