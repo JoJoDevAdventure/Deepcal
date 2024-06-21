@@ -10,7 +10,7 @@ export const fetchBlogPosts = async () => {
       {
         headers: {
           'Authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
-          'Content-Type':  'application/json;charset=utf-8',
+          'Content-Type': 'application/json',
         },
       }
     );
