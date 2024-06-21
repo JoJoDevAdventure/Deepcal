@@ -7,7 +7,7 @@ const NavBar = () => {
   const scrollByAmount = (amount) => {
     window.scrollTo({
       top: window.scrollY + amount,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -36,19 +36,22 @@ const NavBar = () => {
         className={`hidden md:flex mt-4 md:mt-0 md:flex-grow md:justify-center md:text-l md:font-regular`}
       >
         <li className="mr-4 lg:mr-8 hover:text-gray-400">
-          <NavLink to="/">
-            Home
-          </NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
-        <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(500)}>
-          <NavLink to="/" >
-            Company
-          </NavLink>
+        <li
+          className="mr-4 lg:mr-8 hover:text-gray-400"
+          onClick={() => scrollByAmount(500)}
+        >
+          <NavLink to="/">Company</NavLink>
         </li>
-        <li className="mr-4 lg:mr-8 hover:text-gray-400" onClick={() => scrollByAmount(1000)}>
-          <NavLink to="/">
-            Solutions
-          </NavLink>
+        <li
+          className="mr-4 lg:mr-8 hover:text-gray-400"
+          onClick={() => scrollByAmount(1000)}
+        >
+          <NavLink to="/">Solutions</NavLink>
+        </li>
+        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+          <NavLink to="/blog">Blog</NavLink>
         </li>
       </ul>
 
@@ -71,14 +74,28 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="mb-4" onClick={() => scrollByAmount(500)}>
-                <NavLink to="/" onClick={() => {toggleMenu()}}>
+                <NavLink
+                  to="/"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
                   Company
                 </NavLink>
               </li>
               <li className="mb-4" onClick={() => scrollByAmount(1400)}>
-                <NavLink to="/" onClick={() => {toggleMenu(); scrollByAmount(-1000);}}>
+                <NavLink
+                  to="/"
+                  onClick={() => {
+                    toggleMenu();
+                    scrollByAmount(-1000);
+                  }}
+                >
                   Solutions
                 </NavLink>
+              </li>
+              <li className="mr-4 lg:mr-8 hover:text-gray-400">
+                <NavLink to="/blog">Blog</NavLink>
               </li>
             </ul>
           </div>
@@ -87,7 +104,10 @@ const NavBar = () => {
 
       {/* Contact us button on the right */}
       <div className="block">
-        <NavLink to="/contact" className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2">
+        <NavLink
+          to="/contact"
+          className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2"
+        >
           Contact Us
         </NavLink>
       </div>
