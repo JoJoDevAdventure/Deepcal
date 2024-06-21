@@ -7,7 +7,7 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("Sending...");
-
+    
     const form = e.target;
     const formData = new FormData(form);
 
