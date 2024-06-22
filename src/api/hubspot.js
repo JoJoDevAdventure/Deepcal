@@ -8,7 +8,6 @@ export const fetchBlogPosts = async () => {
   try {
     const response = await axios.get(
       `https://api.hubapi.com/cms/v3/blogs/posts`,
-      // `/cms/v3/blogs/posts`,
       {
         headers: {
           'authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
