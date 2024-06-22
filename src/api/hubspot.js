@@ -7,7 +7,8 @@ const HUBSPOT_BLOG_ID = "106932793560";
 export const fetchBlogPosts = async () => {
   try {
     const response = await axios.get(
-      `/cms/v3/blogs/posts`,
+      `https://api.hubapi.com/cms/v3/blogs/posts`,
+      // `/cms/v3/blogs/posts`,
       {
         headers: {
           'authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
