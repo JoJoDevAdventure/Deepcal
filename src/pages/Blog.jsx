@@ -1,9 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { fetchBlogPosts } from "../api/hubspot";
 import { Footer, NavBar } from "../components";
+import axios from "axios";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
+
+  const fetchBlogPosts = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.hubapi.com/cms/v3/blogs/posts`,
+        {
+          headers: {
+            'authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
+          },
+        }
+      );
+      console.log(response.data)
+      return response.data.results;
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
+      throw error;
+    }
+  };
 
   useEffect(() => {
     const getPosts = async () => {
