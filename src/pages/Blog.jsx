@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { Footer, NavBar } from "../components";
 import axios from "axios";
 
@@ -10,8 +11,8 @@ const Blog = () => {
       const response = await axios.get(
         `https://deepcal-api-2cc87306f059.herokuapp.com/api/blog-posts`
       );
-      console.log(response.data)
-      return response.data.results;
+      console.log(response.data);
+      return response.data;
     } catch (error) {
       console.error("Error fetching blog posts:", error);
       throw error;
@@ -32,7 +33,7 @@ const Blog = () => {
       <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-[5%]">
         <h1 className="text-white text-4xl mb-4">Our blogs</h1>
         {posts && posts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-h-[600px]">
             {posts.map((post) => (
               <div
                 key={post.name}
@@ -44,14 +45,15 @@ const Blog = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h2 className="text-lg font-bold mb-2 text-white">{post.name}</h2>
-                  <p
-                    className="text-gray-400 mb-4"
-                    dangerouslySetInnerHTML={{ __html: post.postBody }}
-                  ></p>
-                  <button className="bg-white text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition duration-300">
-                    Read More
-                  </button>
+                  <h2 className="text-lg font-bold mb-2 text-white min-h-[100px]">{post.name}</h2>
+                  <Link
+                    to={`/blog/${post.id}`} // assuming post.id is unique for each post
+                    state={{ post }} // pass the post data as state
+                  >
+                    <button className="bg-white text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition duration-300">
+                      Read More
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -60,10 +62,9 @@ const Blog = () => {
           <p className="text-white">Loading posts...</p>
         )}
       </div>
-      <Footer />
+      <Footer bg={"black"}/>
     </div>
   );
-  
 };
 
 export default Blog;
