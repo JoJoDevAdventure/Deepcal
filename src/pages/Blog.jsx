@@ -4,17 +4,11 @@ import axios from "axios";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
-  const HUBSPOT_ACCESS_TOKEN = "pat-eu1-23bb0deb-1d99-4bd5-8d97-2992b3f75665";
 
   const fetchBlogPosts = async () => {
     try {
       const response = await axios.get(
-        `/cms/v3/blogs/posts`,
-        {
-          headers: {
-            'authorization': `Bearer ${HUBSPOT_ACCESS_TOKEN}`,
-          },
-        }
+        `https://deepcal-api-2cc87306f059.herokuapp.com/api/blog-posts`
       );
       console.log(response.data)
       return response.data.results;
