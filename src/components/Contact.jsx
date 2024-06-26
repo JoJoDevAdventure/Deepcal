@@ -9,7 +9,7 @@ const Contact = () => {
       </h1>
       <div className="h-[250px] w-[400px] md:w-[500px] bg-[#D9D9D9] mt-10 justify-between items-center py-6 lg:py-10 px-4 lg:px-10 flex flex-col">
         <h2 className="text-2xl font-medium"> Want To Know More ? </h2>
-        <p className="font-light"> Get in touch with us today for further details. We're here to answer any questions you may have! </p>
+        <p className="font-light w-[80%] md:w-full"> Get in touch with us today for further details. We're here to answer any questions you may have! </p>
         <div className="flex text-center gap-10 justify-center items-center">
           <p className="font-light"> info@deepcal.xyz</p>
           <NavLink to="/contact" className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">

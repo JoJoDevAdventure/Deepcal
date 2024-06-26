@@ -43,7 +43,7 @@ const Blog = () => {
         {loading ? (
           <p className="text-white">Loading posts...</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-h-[600px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fulls">
             {posts.length > 0 ? (
               posts.map((post) => (
                 <div

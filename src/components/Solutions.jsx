@@ -111,8 +111,8 @@ const SolutionMobile = ({ title, description, image }) => {
           variants={variants}
         >
           <motion.div initial="hidden" animate={controls} variants={variants}>
-            <h2 className="text-xl font-semibold mb-2">{title}</h2>
-            <p>{description}</p>
+            <h2 className="text-s font-semibold mb-2">{title}</h2>
+            <p className="text-[12px]">{description}</p>
           </motion.div>
         </motion.div>
         <motion.img

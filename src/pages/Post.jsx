@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import { useLocation } from "react-router-dom";
 import { Footer, NavBar } from "../components";
 
 const Post = () => {
@@ -13,18 +13,18 @@ const Post = () => {
   return (
     <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] min-h-[100vh]">
       <NavBar />
-      <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-[5%] px-[20%]">
+      <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-[5%] px-4">
         <h1 className="text-white text-4xl mb-4">{post.name}</h1>
         <img
           src={post.featuredImage}
           alt=""
           className="w-full h-48 object-cover"
         />
-        <div className="p-4 text-white">
+        <div className="pt-10 text-white">
           <div dangerouslySetInnerHTML={{ __html: post.postBody }}></div>
         </div>
       </div>
-      <Footer bg={"black"}/>
+      <Footer bg={"black"} />
     </div>
   );
 };
