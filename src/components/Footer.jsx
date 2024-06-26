@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = ({ bg }) => {
   return (
@@ -6,13 +7,16 @@ const Footer = ({ bg }) => {
       <div className="mb-2">
         <ul className="flex md:text-lg text-[#8F8F8F] text-sm">
           <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
-            <a href="#">Home</a>
+            <NavLink to="/">Home</NavLink>{" "}
           </li>
           <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
-            <a href="#">Company</a>
+            <NavLink to="/">Company</NavLink>
           </li>
           <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
-            <a href="#">Solutions</a>
+            <NavLink to="/">Solutions</NavLink>
+          </li>
+          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
+            <NavLink to="/Blog">Blog</NavLink>
           </li>
         </ul>
       </div>

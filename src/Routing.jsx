@@ -11,7 +11,7 @@ export const Routing = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/contact' element={<ContactPage />} />
                 <Route path='/blog' element={<Blog/>} />
-                <Route path="/blog/:postid" element={<Post/>}/>
+                <Route path="/:postid" element={<Post/>}/>
             </Routes>
         </Router>
     )

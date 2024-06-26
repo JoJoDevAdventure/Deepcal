@@ -58,7 +58,7 @@ const Blog = () => {
                   <div className="p-4">
                     <h2 className="text-lg font-bold mb-2 text-white min-h-[100px]">{post.name}</h2>
                     <Link
-                      to={`/blog/${post.id}`}
+                      to={`/${post.id}`}
                       state={{ post }}
                     >
                       <button className="bg-white text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition duration-300">
