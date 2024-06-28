@@ -1,5 +1,6 @@
 import React from "react";
 import { About, Contact, Footer, Header, Solutions } from "../components";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
