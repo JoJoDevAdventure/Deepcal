@@ -25,7 +25,7 @@
 }
 
 .head-text {
-  @apply xl:text-[4rem] md:text-[3rem] text-[2rem] font-bold text-white uppercase;
+  @apply xl:text-[4rem] md:text-[3rem] text-[1.5rem] font-bold text-white uppercase;
 }
 
 .download-btn {

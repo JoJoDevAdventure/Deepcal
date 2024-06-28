@@ -102,7 +102,7 @@ const SolutionMobile = ({ title, description, image }) => {
   }, [controls, inView]);
 
   return (
-    <div className="relative overflow-hidden px-8 py-4">
+    <div className="relative overflow-hidden px-2 py-2">
       <div ref={ref} className="relative">
         <motion.div
           className="absolute left-0 top-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center text-white text-center p-4"

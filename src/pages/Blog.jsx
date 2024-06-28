@@ -38,7 +38,7 @@ const Blog = () => {
   return (
     <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] h-[100%] min-h-[100vh]">
       <NavBar />
-      <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-[5%]">
+      <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-5 md:mb-[5%]">
         <h1 className="text-white text-4xl mb-4">Our blogs</h1>
         {loading ? (
           <p className="text-white">Loading posts...</p>
@@ -48,7 +48,7 @@ const Blog = () => {
               posts.map((post) => (
                 <div
                   key={post.id}
-                  className="border border-white rounded-lg overflow-hidden shadow-lg mt-10 lg:mt-20 mb-10 lg:mb-20 bg-transparent hover:bg-white hover:bg-opacity-10 transition duration-300"
+                  className="border border-white rounded-lg overflow-hidden shadow-lg mt-10 lg:mt-20 mb-2 md:mb-20 bg-transparent hover:bg-white hover:bg-opacity-10 transition duration-300"
                 >
                   <img
                     src={post.featuredImage}

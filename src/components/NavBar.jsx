@@ -16,10 +16,10 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="text-white p-4 flex justify-between items-center relative">
-      <div className="flex flex-row space-x-2 justify-between align-left items-start text-left origin-left">
+    <nav className="text-white pt-5 flex justify-between items-center relative">
+      <div className="flex flex-row space-x-2 justify-between align-left text-left origin-left align-middle items-center">
         {/* Side menu icon for mobile */}
-        <div className="block md:hidden mt-0 self-center">
+        <div className="block md:hidden mt-0 self-  center">
           <button onClick={toggleMenu} className="text-white ml-4">
             {isMenuOpen ? "" : <span className="text-3xl">&#9776;</span>}
           </button>
@@ -106,7 +106,7 @@ const NavBar = () => {
       <div className="block">
         <NavLink
           to="/contact"
-          className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-4 rounded-full border-white border-2"
+          className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-3 md:px-4 rounded-full border-white border-2"
         >
           Contact Us
         </NavLink>

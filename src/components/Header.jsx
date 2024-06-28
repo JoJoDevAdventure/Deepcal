@@ -41,14 +41,14 @@ const Header = () => {
             type="filled"
             title="OUR SOLUTIONS"
             handleClick={() => scrollByAmount(1000)}
-            customStyles={"w-full px-6 py-4 font-bold text-sm mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
+            customStyles={"w-full px-6 py-3 md:px-6 md:py-4 md:font-bold text-sm mb-3 md:mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
           />
           <NavLink to="/contact" className="w-[45%]">
           <CustomButton
             type="outline"
             title="CONTACT US"
             handleClick={ () => {}}
-            customStyles={"w-full text-white px-6 py-4 font-bold text-sm hover:bg-white hover:text-black"}
+            customStyles={"w-full text-white px-3 py-3 md:px-6 md:py-4 md:font-bold text-sm hover:bg-white hover:text-black"}
           />
           </NavLink>
         </motion.div>
