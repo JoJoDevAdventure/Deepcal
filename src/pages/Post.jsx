@@ -24,8 +24,8 @@ const Post = () => {
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>
       <NavBar/>
-      <div className="flex flex-col justify-top items-center h-auto w-full mt-[5%] mb-[5%] px-4 md:px-[20%]">
-        <h1 className="text-white text-2xl md:text-4xl mb-4">{post.name}</h1>
+      <div className="flex flex-col justify-top h-auto w-full mt-[5%] mb-[5%] px-4 md:px-[20%] justify-start">
+        <h1 className="text-white text-2xl md:text-4xl mb-4 text-left bm-2">{post.name}</h1>
         <img
           src={post.featuredImage}
           alt=""
