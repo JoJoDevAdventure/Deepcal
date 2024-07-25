@@ -48,18 +48,22 @@ const Post = () => {
           <div dangerouslySetInnerHTML={{ __html: post.postBody }}></div>
         </div>
       </div>
-      <div className="flex justify-center items-center h-[250px] w-full py-6 lg:py-10">
-        <div className="text-center bg-white p-4 shadow-md w-[80%] md:w-[500px]">
-          <h2 className="text-2xl font-medium mb-4">Want To Know More?</h2>
-          <p className="font-light mb-4">
+      <div className="flex justify-center items-center mt-10 py-4 lg:py-6">
+        <div className="text-center bg-white p-4 shadow-md w-[90%] md:w-[80%] lg:w-[60%] max-w-[500px]">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-2 md:mb-4">
+            Want To Know More?
+          </h2>
+          <p className="text-sm md:text-base lg:text-lg font-light mb-2 md:mb-4">
             Get in touch with us today for further details. We're here to answer
             any questions you may have!
           </p>
-          <div className="flex justify-center gap-10">
-            <p className="font-light">info@deepcal.xyz</p>
+          <div className="flex flex-col md:flex-row justify-center gap-4">
+            <p className="font-light text-sm md:text-base lg:text-lg mb-2 md:mb-0">
+              info@deepcal.xyz
+            </p>
             <NavLink
               to="/contact"
-              className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2"
+              className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2 text-sm md:text-base lg:text-lg"
             >
               Contact Us
             </NavLink>
