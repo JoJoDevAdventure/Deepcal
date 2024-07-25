@@ -19,8 +19,8 @@ const Post = () => {
         <meta name="keywords" content={post.metaDescription} />
         <meta property="og:title" content={post.name} />
         <meta property="og:description" content={post.metaDescription || "Read this amazing blog post on Deepcal"} />
-        <meta property="og:image" content={post.featuredImage} />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:image" content={post.featuredImage}/>
+        <meta property="og:url" content={window.location.href}/>
         <meta name="twitter:card" content="summary_large_image"/>
       </Helmet>
       <NavBar/>

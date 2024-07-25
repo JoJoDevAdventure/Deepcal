@@ -2,17 +2,29 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Footer = ({ bg }) => {
+
+  const scrollByAmount = (amount) => {
+    window.scrollTo({
+      top: 0 + amount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="px-[8%] py-[3%]">
       <div className="mb-2">
         <ul className="flex md:text-lg text-[#8F8F8F] text-sm">
-          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
+          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2"
+          onClick={() => scrollByAmount(0)}
+          >
             <NavLink to="/">Home</NavLink>{" "}
           </li>
-          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
+          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2"
+          onClick={() => scrollByAmount(500)}>
             <NavLink to="/">Company</NavLink>
           </li>
-          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
+          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2"
+          onClick={() => scrollByAmount(1000)}>
             <NavLink to="/">Solutions</NavLink>
           </li>
           <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
