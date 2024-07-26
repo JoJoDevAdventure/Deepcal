@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Contact, Footer, NavBar } from "../components";
 import { NavLink } from "react-router-dom";
+import DarkNavBar from "../components/DarkNavBar";
 
 const Post = () => {
   const location = useLocation();
@@ -13,13 +14,13 @@ const Post = () => {
   }
 
   return (
-    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] min-h-[100vh]">
+    <div className="bg-white text-black px-2 md:px-14 lg:px-[12%] min-h-[100vh]">
       <Helmet>
         <title>{post.name} | Deepcal Blog</title>
         <meta
           name="description"
           content={
-            post.excerpt || "Read this amazing blog post on Your Blog Name"
+            post.excerpt || "Read this amazing blog post on Deepcal Blog"
           }
         />
         <meta name="keywords" content={post.metaDescription} />
@@ -34,22 +35,22 @@ const Post = () => {
         <meta property="og:url" content={window.location.href} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <NavBar />
+      <DarkNavBar />
       <div className="flex flex-col justify-top h-auto w-full mt-[5%] mb-[5%] px-4 md:px-[20%] justify-start">
-        <h1 className="text-white text-2xl md:text-4xl mb-4 text-left bm-2">
+        <h1 className="text-black text-2xl md:text-4xl mb-4 text-left bm-2">
           {post.name}
         </h1>
         <img
           src={post.featuredImage}
           alt=""
-          className="w-full h-48 object-cover"
+          className="w-full h-52 object-cover"
         />
-        <div className="pt-10 text-white">
+        <div className="pt-10 text-black">
           <div dangerouslySetInnerHTML={{ __html: post.postBody }}></div>
         </div>
       </div>
       <div className="flex justify-center items-center mt-10 py-4 lg:py-6">
-        <div className="text-center bg-white p-4 shadow-md w-[90%] md:w-[80%] lg:w-[60%] max-w-[500px]">
+        <div className="text-center bg-gray-100 p-4 shadow-md w-[90%] md:w-[80%] lg:w-[60%] max-w-[500px]">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-2 md:mb-4">
             Want To Know More?
           </h2>
@@ -63,14 +64,14 @@ const Post = () => {
             </p>
             <NavLink
               to="/contact"
-              className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2 text-sm md:text-base lg:text-lg"
+              className="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-full border-black border-2 text-sm md:text-base lg:text-lg"
             >
               Contact Us
             </NavLink>
           </div>
         </div>
       </div>
-      <Footer bg={"black"} />
+      <Footer bg={"white"} />
     </div>
   );
 };
