@@ -43,7 +43,7 @@ const Post = () => {
         <img
           src={post.featuredImage}
           alt=""
-          className="w-full h-52 object-cover"
+          className="w-full h-full object-cover"
         />
         <div className="pt-10 text-black">
           <div dangerouslySetInnerHTML={{ __html: post.postBody }}></div>
