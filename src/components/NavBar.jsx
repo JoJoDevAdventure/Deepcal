@@ -51,7 +51,7 @@ const NavBar = () => {
           <NavLink to="/">Solutions</NavLink>
         </li>
         <li className="mr-4 lg:mr-8 hover:text-gray-400">
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="https://blog.deepcal.xyz">Blog</NavLink>
         </li>
       </ul>
 
@@ -95,7 +95,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
               <li className="mr-4 lg:mr-8 hover:text-gray-400">
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink to="https://blog.deepcal.xyz">Blog</NavLink>
               </li>
             </ul>
           </div>
