@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  
-import Home from './pages/Home';
-import ContactPage from './pages/ContactPage';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Blog from './pages/Blog';
-import Post from './pages/Post';
-import { HashRouter } from 'react-router-dom';
+import ContactPage from './pages/ContactPage';
+import Home from './pages/Home';
 import Industry from './pages/Industry';
+import Post from './pages/Post';
 
 export const Routing = () => {
     return (
