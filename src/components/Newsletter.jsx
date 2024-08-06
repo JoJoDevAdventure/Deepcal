@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 
 const Newsletter = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [email, setEmail] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 5000); // Show pop-up after 10 seconds
+    }, 5000); // Show pop-up after 5 seconds
 
     return () => clearTimeout(timer); // Cleanup timer on component unmount
   }, []);
@@ -16,10 +18,36 @@ const Newsletter = () => {
     setIsVisible(false);  
   };
 
-  const handleSubscribe = () => {
-    // Handle subscribe logic here
-    alert("Subscribed!");
-    closePopup();
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setSuccessMessage("Sending...");
+
+    const formData = new FormData();
+    formData.append("access_key", "cd8391e9-ca2a-49f8-8724-f8c41ba0c1f0"); // Replace with your Web3Forms access key
+    formData.append("email", email);
+
+    try {
+      // Submit to Web3Forms for email
+      const emailResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const emailData = await emailResponse.json();
+
+      // Check response from Web3Forms
+      if (emailData.success) {
+        setSuccessMessage("Subscribed successfully!");
+        setTimeout(() => {
+          setSuccessMessage("");
+          closePopup();
+        }, 5000);
+      } else {
+        throw new Error(emailData.message);
+      }
+    } catch (error) {
+      console.error('Error!', error.message);
+      setSuccessMessage(`Error: ${error.message}`);
+    }
   };
 
   return (
@@ -44,17 +72,23 @@ const Newsletter = () => {
             <p className="mb-4">
               Stay updated with our latest news and offers.
             </p>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full p-2 border rounded mb-4"
-            />
-            <button
-              onClick={handleSubscribe}
-              className="w-full bg-black text-white border-2 hover:text-black hover:border-black border-white hover:border-transparent py-2 rounded hover:bg-transparent"
-            >
-              Subscribe
-            </button>
+            <form onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-2 border rounded mb-4"
+                required
+              />
+              <button
+                type="submit"
+                className="w-full bg-black text-white border-2 hover:text-black hover:border-black border-white hover:border-transparent py-2 rounded hover:bg-transparent"
+              >
+                Subscribe
+              </button>
+              <p className="text-center mt-4">{successMessage}</p>
+            </form>
           </div>
         </motion.div>
       )}

@@ -53,6 +53,7 @@ const DarkNavBar = () => {
         <li className="mr-4 lg:mr-8 hover:text-gray-400">
           <NavLink to="/blog">Blog</NavLink>
         </li>
+        
       </ul>
 
       {/* Side menu */}

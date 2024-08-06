@@ -53,6 +53,9 @@ const NavBar = () => {
         <li className="mr-4 lg:mr-8 hover:text-gray-400">
           <NavLink to="https://blog.deepcal.xyz">Blog</NavLink>
         </li>
+        <li className="mr-4 lg:mr-8 hover:text-gray-400">
+          <NavLink to="/industry-news">Industry News</NavLink>
+        </li>
       </ul>
 
       {/* Side menu */}
@@ -94,8 +97,12 @@ const NavBar = () => {
                   Solutions
                 </NavLink>
               </li>
-              <li className="mr-4 lg:mr-8 hover:text-gray-400">
+              <li className="mr-4 lg:mr-8 hover:text-gray-400 mb-4">
                 <NavLink to="https://blog.deepcal.xyz">Blog</NavLink>
+              </li>
+
+              <li className="mr-4 lg:mr-8 hover:text-gray-400">
+                <NavLink to="/industry-news">Industry News</NavLink>
               </li>
             </ul>
           </div>

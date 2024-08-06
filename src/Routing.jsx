@@ -4,15 +4,17 @@ import ContactPage from './pages/ContactPage';
 import Blog from './pages/Blog';
 import Post from './pages/Post';
 import { HashRouter } from 'react-router-dom';
+import Industry from './pages/Industry';
 
 export const Routing = () => {
     return (
         <HashRouter>
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/contact' element={<ContactPage />} />
-                <Route path='/blog' element={<Blog/>} />
+                <Route index element={<Home />} />
+                <Route path='contact' element={<ContactPage />} />
+                <Route path='blog' element={<Blog/>} />
                 <Route path="/:postid" element={<Post/>}/>
+                <Route path='industry-news' element={<Industry/>} />
             </Routes>
         </HashRouter>
     )
