@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { slideAnimation } from "../config/motion";
 import CustomButton from "./CustomButton";
 import NavBar from "./NavBar";
-import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
       <div className="justify-center items-center h-full py-5 md:py-13 lg:py-20 text-center lg:justify-start lg:text-left">
         <motion.div {...slideAnimation("left", 0.4)} className="">
           <h1 className="head-text text-white">
-            Zero-Click Automated <br />
+            <span className="text-[#53A9CE]">Zero-Click </span>Automated<br />
             Sensor Calibration
           </h1>
         </motion.div>
@@ -48,7 +48,7 @@ const Header = () => {
             type="outline"
             title="CONTACT US"
             handleClick={ () => {}}
-            customStyles={"w-full text-white px-3 py-3 md:px-6 md:py-4 md:font-bold text-sm hover:bg-white hover:text-black"}
+            customStyles={"w-full text-white px-3 py-3 md:px-6 md:py-4 md:font-bold text-sm hover:bg-[#0582B8] hover:text-white border-[#0582B8]"}
           />
           </NavLink>
         </motion.div>

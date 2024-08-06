@@ -10,7 +10,7 @@ const CustomButton = ({ type, title, customStyles, handleClick }) => {
         } else {
             return {
                 borderWidth: '1px',
-                borderColor:  "#fff",
+                borderColor:  "#0582B8",
 
             }
         }

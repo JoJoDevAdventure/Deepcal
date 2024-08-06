@@ -12,7 +12,7 @@ const Contact = () => {
         <p className="font-light w-[80%] md:w-full"> Get in touch with us today for further details. We're here to answer any questions you may have! </p>
         <div className="flex text-center gap-10 justify-center items-center">
           <p className="font-light"> info@deepcal.xyz</p>
-          <NavLink to="/contact" className="bg-black hover:bg-transparent hover:text-black text-white font-semibold py-2 px-4 rounded-full border-black border-2">
+          <NavLink to="/contact" className="bg-[#0582B8] hover:bg-transparent hover:text-[#0582B8] text-white font-semibold py-2 px-4 rounded-full border-[#0582B8] border-2">
             Contact Us
         </NavLink>
         </div>

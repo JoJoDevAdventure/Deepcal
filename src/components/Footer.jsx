@@ -30,6 +30,9 @@ const Footer = ({ bg }) => {
           <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
             <NavLink to="https://blog.deepcal.xyz">Blog</NavLink>
           </li>
+          <li className="mr-4 lg:mr-8 duration-300 transition-all ease-in transform hover:-translate-y-2">
+          <NavLink to="/industry-news">Industry News</NavLink>
+        </li>
         </ul>
       </div>
       <div className="border-b-2 border-[#8F8F8F] w-[100%] h-1 mb-4"></div>

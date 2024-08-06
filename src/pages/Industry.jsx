@@ -27,7 +27,7 @@ const Industry = () => {
                 to={blog.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-white rounded-lg overflow-hidden shadow-lg mb-6 bg-transparent hover:bg-white hover:bg-opacity-10 transition duration-300"
+                className="block border border-[#0582B8] rounded-lg overflow-hidden shadow-lg mb-6 bg-transparent hover:bg-white hover:bg-opacity-10 transition duration-300"
               >
                 <div className="flex flex-col md:flex-row items-center">
                   <img
@@ -38,7 +38,7 @@ const Industry = () => {
                   <div className="p-4 md:w-2/3">
                     <h2 className="text-lg font-bold mb-2 text-white">{blog.title}</h2>
                     <p className="text-white mb-4">{blog.description}</p>
-                    <div className="inline-block bg-white text-black border border-black px-4 py-2 rounded hover:bg-black hover:text-white transition duration-300">
+                    <div className="inline-block bg-[#0582B8] text-white border border-[#0582B8] px-4 py-2 rounded hover:bg-transparent hover:text-[#0582B8] transition duration-300">
                       Read More
                     </div>
                   </div>

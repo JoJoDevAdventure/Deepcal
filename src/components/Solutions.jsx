@@ -46,7 +46,7 @@ const Solution = ({ title, description, image, imgPosition }) => {
 
       <div className={`md:text-left text-center w-[60%] `}>
         <motion.h2
-          className="text-3xl font-medium mb-2"
+          className="text-3xl font-medium mb-2 text-[#0582B8]"
           initial="hidden"
           animate={controls}
           variants={variants}
@@ -136,7 +136,7 @@ const Solutions = () => {
       className="max-w-4xl mx-auto text-center mt-[5%] mb-[10%]"
     >
       <h2 className="text-2xl md:text-4xl font-semibold border-b-2 border-gray-400 inline-block mb-8 pb-2">
-        Our Solutions
+        Our <span className="text-[#0582B8]">Solutions</span> 
       </h2>
       {/* Desktop view */}
       <div className="hidden md:block">
