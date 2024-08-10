@@ -1,7 +1,8 @@
 import React from "react";
-import { About, Contact, Footer, Header, Solutions } from "../components";
 import { Helmet } from "react-helmet";
+import { About, Contact, Footer, Header, Solutions } from "../components";
 import Newsletter from "../components/Newsletter";
+import NewsLetterSection from "../components/NewsLetterSection";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Header />
       <About />
       <Solutions />
+      <NewsLetterSection/>
       <Contact />
       <Footer />
     </div>

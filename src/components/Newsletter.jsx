@@ -15,7 +15,7 @@ const Newsletter = () => {
   }, []);
 
   const closePopup = () => {
-    setIsVisible(false);  
+    setIsVisible(false);
   };
 
   const handleSubscribe = async (e) => {
