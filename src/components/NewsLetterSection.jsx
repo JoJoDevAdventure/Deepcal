@@ -36,14 +36,14 @@ const NewsLetterSection = () => {
   };
 
   return (
-    <div className="flex items-center justify-center bg-gray-100 p-8 py-20  w-[90%] lg:w-full  px-2 md:px-14 lg:px-[12%]">
+    <div className="flex md:flex-row flex-col items-center justify-center bg-gray-100 p-8 py-20  w-[100%] lg:w-full  px-4 md:px-14 lg:px-[12%] gap-12 md:gap-0">
       <img
         src="./news.jpg"
         alt="Newsletter"
-        className="w-[50%] rounded-lg"
+        className="md:w-[50%] w-[90%] rounded-lg"
       />
-      <div className="ml-8 w-2/3">
-        <h1 className="text-3xl font-bold mb-4">Subscribe to our Newsletter</h1>
+      <div className="md:ml-8 ml-0 md:w-2/3 w-[90%]">
+        <h1 className="md:text-3xl text-2xl font-bold mb-4">Subscribe to our<span className='text-[#0582B8]'> Newsletter</span></h1>
         <p className="mb-4">Stay updated with our latest news and offers.</p>
         <form onSubmit={handleSubscribe} className='flex flex-row gap-4'>
           <input
@@ -56,7 +56,7 @@ const NewsLetterSection = () => {
           />
           <button
             type="submit"
-            className="bg-black text-white hover:text-black hover:border-black border-2 py-2 rounded hover:bg-transparent border-black w-[30%]"
+            className="bg-black text-white hover:text-black hover:border-black border-2 py-2 rounded hover:bg-transparent border-black w-[40%] md:w-[30%]"
           >
             Subscribe
           </button>

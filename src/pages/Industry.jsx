@@ -10,6 +10,13 @@ const industryBlogs = [
     image: "https://www.just-auto.com/wp-content/uploads/sites/30/2024/08/Tesla2-1024x683.jpg",
     link: "https://www.just-auto.com/newsletters/tesla-car-that-killed-motorcyclist-was-in-full-self-driving-mode"
   },
+  {
+    id: 2,
+    title: "US expected to propose barring Chinese software in autonomous vehicles",
+    description: "The U.S. Commerce Department is expected to propose barring Chinese software in autonomous and connected vehicles in the coming weeks, according to sources briefed on the matter.",
+    image: "https://www.reuters.com/resizer/v2/UQG54WPIDFORBOQNCYQLKMGGPI.jpg?auth=c27535fe8b6e1fe27c904d59ee811135eaf76509942cb34befb6b85fe020e1eb&width=1920&quality=80",
+    link: "https://www.reuters.com/business/autos-transportation/us-expected-propose-barring-chinese-software-autonomous-vehicles-2024-08-04"
+  },
   // Add more blogs as needed
 ];
 

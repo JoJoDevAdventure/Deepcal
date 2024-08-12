@@ -14,6 +14,8 @@ export const Routing = () => {
                 <Route path='blog' element={<Blog/>} />
                 <Route path="/:postid" element={<Post/>}/>
                 <Route path='industry-news' element={<Industry/>} />
+
+                
             </Routes>
         </HashRouter>
     )

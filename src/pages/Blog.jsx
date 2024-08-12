@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Footer, NavBar } from "../components";
-import axios from "axios";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const fetchBlogPosts = async () => {
-    try {
-      const response = await axios.get(
-        `https://deepcal-api-2cc87306f059.herokuapp.com/api/blog-posts`
-      );
-      console.log('Fetched blog posts:', response.data);
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching blog posts:", error);
-      throw error;
-    }
-  };
 
   useEffect(() => {
     const getPosts = async () => {
