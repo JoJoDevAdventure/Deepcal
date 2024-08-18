@@ -17,7 +17,7 @@ const Demo = () => {
     const formData = new FormData(form);
 
     // Append access key for email submission
-    formData.append("access_key", "fbd9f17e-093c-4058-b3f9-ba3566bd37a3");
+    formData.append("access_key", "cd8391e9-ca2a-49f8-8724-f8c41ba0c1f0");
 
     try {
       // Submit to Web3Forms for email
