@@ -21,7 +21,7 @@ const Header = () => {
       <div className="justify-center items-center h-full py-5 md:py-13 lg:py-20 text-center lg:justify-start lg:text-left">
         <motion.div {...slideAnimation("left", 0.4)} className="">
           <h1 className="head-text text-white">
-            <span className="text-[#53A9CE]">Zero-Click </span>Automated<br />
+            <span className="text-[#53A9CE]">Zero-Click </span>Autom  ated<br />
             Sensor Calibration
           </h1>
         </motion.div>
@@ -43,12 +43,12 @@ const Header = () => {
             handleClick={() => scrollByAmount(1000)}
             customStyles={"w-full px-6 py-3 md:px-6 md:py-4 md:font-bold text-sm mb-3 md:mb-5 md:my-0 hover:bg-transparent hover:border hover:border-white bg-white hover:text-white"}
           />
-          <NavLink to="/contact" className="w-[45%]">
+          <NavLink to="/demo" className="w-[45%]">
           <CustomButton
-            type="outline"
-            title="CONTACT US"
+            type="filled"
+            title="REQUEST DEMO"
             handleClick={ () => {}}
-            customStyles={"w-full text-white px-3 py-3 md:px-6 md:py-4 md:font-bold text-sm hover:bg-[#0582B8] hover:text-white border-[#0582B8]"}
+            customStyles={"w-full px-6 py-3 md:px-6 md:py-4 md:font-bold text-sm mb-3 bg-[#53A9CE] text-white md:mb-5 md:my-0 hover:bg-transparent hover:border hover:border-[#53A9CE] hover:text-white"}
           />
           </NavLink>
         </motion.div>

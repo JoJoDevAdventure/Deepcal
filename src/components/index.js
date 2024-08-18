@@ -8,4 +8,3 @@ import Solutions from "./Solutions";
 
 
 export { About, Contact, CustomButton, Footer, Header, NavBar, Solutions };
-

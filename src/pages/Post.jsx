@@ -1,9 +1,8 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Contact, Footer, NavBar } from "../components";
-import { NavLink } from "react-router-dom";
-import DarkNavBar from "../components/DarkNavBar";
+import { NavLink, useLocation } from "react-router-dom";
+import { Footer } from "../components";
+
 
 const Post = () => {
   const location = useLocation();
@@ -35,7 +34,6 @@ const Post = () => {
         <meta property="og:url" content={window.location.href} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <DarkNavBar />
       <div className="flex flex-col justify-top h-auto w-full mt-[5%] mb-[5%] px-4 md:px-[20%] justify-start">
         <h1 className="text-black text-2xl md:text-4xl mb-4 text-left bm-2">
           {post.name}

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Footer, NavBar } from "../components";
-import { useEffect } from "react";
 
 const ContactPage = () => {
   const [successMessage, setMessage] = React.useState("");
@@ -58,7 +57,7 @@ const ContactPage = () => {
   };
   
   return (
-    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%] h-[100%]">
+    <div className="bg-[#0C0C0C] px-2 md:px-14 lg:px-[12%]  min-h-[100vh]">
       <NavBar />
       <div className="flex flex-col justify-top items-center h-auto w-full mt-[10%] mb-[5%]">
         <h1 className="text-white text-4xl text-center mb-2">Leave us a message!</h1>
