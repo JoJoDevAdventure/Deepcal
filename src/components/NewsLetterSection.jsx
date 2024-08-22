@@ -46,6 +46,11 @@ const NewsLetterSection = () => {
         <h1 className="md:text-3xl text-2xl font-bold mb-4">Subscribe to our<span className='text-[#0582B8]'> Newsletter</span></h1>
         <p className="mb-4">Stay updated with our latest news and offers.</p>
         <form onSubmit={handleSubscribe} className='flex flex-row gap-4'>
+        <input
+                type="hidden"
+                name="subject"
+                value="New newsletter subscriber from newsletter"
+              />
           <input
             type="email"
             placeholder="Enter your email"

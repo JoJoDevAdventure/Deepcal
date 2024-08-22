@@ -73,6 +73,11 @@ const Newsletter = () => {
               Stay updated with our latest news and offers.
             </p>
             <form onSubmit={handleSubscribe}>
+            <input
+                type="hidden"
+                name="subject"
+                value="New newsletter subscriber from newsletter"
+              />
               <input
                 type="email"
                 placeholder="Enter your email"
