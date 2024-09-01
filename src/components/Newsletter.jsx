@@ -72,7 +72,7 @@ const Newsletter = () => {
             <p className="mb-4">
               Stay updated with our latest news and offers.
             </p>
-            <form onSubmit={handleSubscribe}>
+            <form name="Newsletter pop-up" onSubmit={handleSubscribe}>
             <input
                 type="hidden"
                 name="subject"

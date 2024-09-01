@@ -56,7 +56,7 @@ const Demo = () => {
               You can start by filling out our questionnaire, and we will get
               back to you within 24 hours.
             </p>
-            <form onSubmit={handleSubmit} className="w-full md:w-[450px]">
+            <form  name="Demo Form : Demo page" onSubmit={handleSubmit} className="w-full md:w-[450px]">
                 <input type="hidden" name="subject" value='Request for demo'/>
               <div className="mb-4">
                 <label
