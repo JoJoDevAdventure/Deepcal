@@ -21,7 +21,7 @@ const Header = () => {
       <div className="justify-center items-center h-full py-5 md:py-13 lg:py-20 text-center lg:justify-start lg:text-left">
         <motion.div {...slideAnimation("left", 0.4)} className="">
           <h1 className="head-text text-white">
-            <span className="text-[#53A9CE]">Zero-Click </span>Autom  ated<br />
+            <span className="text-[#53A9CE]">Zero-Click </span>Automated<br />
             Sensor Calibration
           </h1>
         </motion.div>
