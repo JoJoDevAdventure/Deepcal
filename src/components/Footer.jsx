@@ -10,7 +10,7 @@ const Footer = ({ bg }) => {
   };
 
   return (
-    <div className="px-[8%] py-[3%]">
+    <div className="px-2 md:px-[8%] py-[3%]">
       <div className="mb-2 flex flex-col md:flex-row justify-between md:items-center ">
         <ul className="flex md:text-lg text-[#8F8F8F] text-sm">
           <li

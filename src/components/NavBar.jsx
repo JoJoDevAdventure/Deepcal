@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <nav className="text-white pt-5 flex justify-between items-center relative">
-      <div className="flex flex-row space-x-2 justify-between align-left text-left origin-left align-middle items-center">
+      <div className="flex flex-row space-x-1 justify-between align-left text-left origin-left align-middle items-center">
         {/* Side menu icon for mobile */}
         <div className=" md:hidden mt-0 flex flex-col items-start justify-start text-left">
           <button onClick={toggleMenu} className="text-white ml-4 flex flex-col items-start justify-start text-left">
@@ -113,13 +113,13 @@ const NavBar = () => {
       <div className="block">
       <NavLink
           to="/demo"
-          className="bg-transparent hover:text-gray-300 text-white font-semibold py-2 px-3 md:px-4 rounded-full"
+          className="bg-transparent hover:text-gray-300 text-white font-semibold py-2 px-2 md:px-5 rounded-full"
         >
           Demo
         </NavLink>
         <NavLink
           to="/contact"
-          className="bg-transparent hover:bg-white hover:text-black text-white font-semibold py-2 px-3 md:px-4 rounded-full border-white border-2"
+          className="bg-transparent mr-2 md:mr-0 hover:bg-white hover:text-black text-white md:font-semibold py-2 px-2 md:px-4 rounded-full border-white border-2"
         >
           Contact Us
         </NavLink>
