@@ -110,10 +110,10 @@ const NavBar = () => {
       )}
 
       {/* Contact us button on the right */}
-      <div className="block">
+      <div className="flex">
       <NavLink
           to="/demo"
-          className="bg-transparent hover:text-gray-300 text-white font-semibold py-2 px-2 md:px-5 rounded-full"
+          className="hidden md:flex md:flex-col relative bg-transparent hover:text-gray-300 text-white font-semibold py-2 px-2 md:px-5 rounded-full"
         >
           Demo
         </NavLink>
