@@ -37,10 +37,10 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-[url('/background-image.jpeg')] bg-cover bg-center min-h-[100vh] px-2 md:px-14 lg:px-[12%] flex flex-col justify-between">
+    <div className="bg-[url('/background-image.jpeg')] bg-cover bg-center min-h-[100vh] md:px-14 lg:px-[12%] flex flex-col justify-between">
       <NavBar />
       <motion.div
-        className="p-8 bg-white rounded shadow-lg flex flex-col items-center justify-center mx-[20%]"
+        className="p-8 bg-white rounded shadow-lg flex flex-col items-center justify-center mx-2 md:mx-[20%]"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -70,18 +70,18 @@ const Newsletter = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="mt-2 p-2 w-3/4 border rounded"
+                className="mt-2 p-2 w-full md:w-3/4 border rounded"
                 name="name"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="mt-2 p-2 w-3/4 border rounded"
+                className="mt-2 p-2 w-full md:w-3/4 border rounded"
                 name="email"
               />
               <button
                 type="submit"
-                className="mt-4 bg-[#0582B8] hover:border-[#0582B8] hover:bg-transparent border-2 hover:text-[#0582B8] text-white font-bold py-2 px-4 rounded w-3/4"
+                className="mt-4 bg-[#0582B8] hover:border-[#0582B8] hover:bg-transparent border-2 hover:text-[#0582B8] text-white font-bold py-2 px-4 rounded  w-full md:w-3/4"
               >
                 Subscribe
               </button>
